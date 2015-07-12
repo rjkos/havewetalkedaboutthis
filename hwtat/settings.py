@@ -197,7 +197,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_APP
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, "hwtattest/templates"),
+    os.path.join(PROJECT_ROOT, "hwtat_theme/templates"),
     os.path.join(PROJECT_ROOT, "templates"),
     )
 
