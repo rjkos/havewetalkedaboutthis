@@ -19,14 +19,8 @@
 <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 <link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
-{% if LANGUAGE_BIDI %}
-<link rel="stylesheet" href="{% static "css/bootstrap-rtl.css" %}">
-{% endif %}
 {% ifinstalled cartridge.shop %}
-<link rel="stylesheet" href="{% static "css/cartridge.css" %}">
-{% if LANGUAGE_BIDI %}
-<link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
-{% endif %}
+<!-- <link rel="stylesheet" href="{% static "css/cartridge.css" %}"> -->
 {% endifinstalled %}
 {% block extra_css %}{% endblock %}
 {% endcompress %}
@@ -47,7 +41,6 @@
 </head>
 
 <body id="{% block body_id %}body{% endblock %}">
-    <div>INTERIORCROCODILEALLIGATOR</div>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container">
@@ -70,6 +63,14 @@
 
 <div class="container">
 
+    <div>
+        <img class="img-responsive center-block" src="hwtat_theme/static/media/uploads/default_images/havewetalkedaboutthis_color_sized.jpg">
+    </div>
+
+</div>
+
+<div class="container">
+
 {% nevercache %}
 {% if messages %}
 <div class="messages">
@@ -85,32 +86,19 @@
 
 <h1>{% block title %}{% endblock %}</h1>
 
-<ul class="breadcrumb">
-{% spaceless %}
-{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-{% endspaceless %}
-</ul>
-
 </div>
 
 <div class="container">
 <div class="row">
 
-<div class="col-md-2 left">
-    {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
-    {% endblock %}
-</div>
 
-<div class="col-md-7 middle">
+
+<div class="col-md-8 middle">
     {% block main %}{% endblock %}
 </div>
 
-<div class="col-md-3 right">
-    {% nevercache %}
-    {% include "includes/language_selector.html" %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
+<div class="col-md-4 right">
+   
     <div class="panel panel-default">
     <div class="panel-body">
     {% block right_panel %}
